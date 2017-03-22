@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>Black-Scholes Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="main.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="input_form">
+  <fieldset>
+    <legend>Black-Scholes Calculator</legend>
+
+      Option Type:
+      <select name="typedropdown" id="put_or_call">
+          <option value="call">Call</option>
+          <option value="put">Put</option>
+      </select>
+      <br /><br />
+
+      Strike Price:
+      <input id="n1">
+      <br /><br />
+
+      Stock Price:
+      <input id="n2">
+      <br /><br />
+
+      Time (in days):
+      <input id="n3">
+      <br /><br />
+
+      Volatilty (in %):
+      <input id="n4">
+      <br /><br />
+
+      Risk Free Interest Rate (in %):
+      <input id="n5">
+      <br /><br />
+
+      <button type="button" class="special_button" onclick="handleinput()"><p class="button_text">Submit</p></button>
+      <br /><br />
+
+      Black-Scholes Price:
+      <input id="price" readonly>
+
+  </fieldset>
+
+<br /><br />
+
+<button type="button" id="info_button" class="special_button" onclick="hideelement()"><p class="button_text">Hide Assumptions</p></button>
+
+</div>
+
+<br /><br />
+
+<div class="info" id="info">
+  "The Black-Scholes model makes certain assumptions:<br /><br />
+
+  1. The option is European and can only be exercised at expiration<br />
+  2. No dividends are paid out during the life of the option<br />
+  3. Efficient markets (i.e., market movements cannot be predicted)<br />
+  4. There are no transaction costs in buying the option<br />
+  5. The risk-free rate and volatility of the underlying are known and constant<br />
+  6. That the returns on the underlying are normally distributed"<br />
+
+  <a href="http://www.investopedia.com/university/options-pricing/black-scholes-model.asp">More information from Investopedia</a>
+</div>
+</body>
+</html>
